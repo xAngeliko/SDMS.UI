@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using SDMS.DL;
 
 
+
+
 namespace SDMS.BL
 {
     public class addDoc
@@ -14,7 +16,7 @@ namespace SDMS.BL
         {
 
         };
-        public void addFile()
+        public static void addFile()
         {
             Console.WriteLine("|------------------------------------------------------------------|");
             Console.WriteLine("|                         ADD A DOCUMENT                            ");
@@ -29,11 +31,14 @@ namespace SDMS.BL
             foreach (Files doc in docs)
             {
                 Console.WriteLine("|DOC TYPE: {0} , DATE SUBMITTED : {1} |", doc.DocType, doc.DateSubmitted );
+                
             }
             Console.WriteLine("|------------------------------------------------------------------|");
-            Console.WriteLine("|DOC TYPE: {0} , DATE SUBMITTED : {1} | FILE SUCCESSFULLY ATTACHED", attachDocType, submissionDate);
+            Console.WriteLine("");
+            Console.WriteLine("|DOC TYPE: {0} , DATE SUBMITTED : {1} | FILE ATTACHED", attachDocType, submissionDate);
+            Console.WriteLine("");
             Console.WriteLine("|------------------------------------------------------------------|");
-
+            
 
         }
     }

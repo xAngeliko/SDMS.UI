@@ -12,7 +12,7 @@ namespace SDMS.UI
         static void Main(string[] args)
         {
             User user = new User();
-            user.StudentID = "0056";
+            user.StudentID = "00256";
             user.Password = "123123";
             int count = 0;
 

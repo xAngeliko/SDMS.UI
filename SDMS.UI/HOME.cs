@@ -21,10 +21,10 @@ namespace SDMS.UI
             switch (option)
             {
                 case 'A':
-
+                    SDMS.BL.addDoc.addFile();
                     break;
                 case 'B':
-
+                    
                     break;
 
                 case 'C':
