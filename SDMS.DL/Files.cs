@@ -8,25 +8,24 @@ namespace SDMS.DL
 {
     public class Files
     {
-        private string docType;
+        public string fileType;
+    
         private DateTime dateSubmitted;
 
-        public Files(string docType, DateTime dateSubmitted)
+        public Files (string filetype, DateTime date)
         {
-            this.docType = docType;
-            this.dateSubmitted = dateSubmitted;
+            this.fileType = filetype;
+            this.dateSubmitted = date;
         }
-
-        public string DocType
+        public string FileType
         {
-            get { return docType; }
-            set { docType = value; }
-        }
-        public DateTime DateSubmitted
+            get { return fileType; }
+            set { fileType = value; }
+        }        
+        public DateTime Date
         {
             get { return dateSubmitted; }
             set { dateSubmitted = value; }
         }
-
     }
 }

@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SDMS.BL\SDMS.BL.csproj" />
-    <ProjectReference Include="..\SDMS.DL\SDMS.DL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,41 +5,32 @@ using System.Text;
 using SDMS.BL;
 
 
+
 namespace SDMS.UI
 {
     class Program
     {
         static void Main(string[] args)
         {
-            User user = new User();
-            user.StudentID = "00256";
-            user.Password = "123123";
-            int count = 0;
+            userLogIn user = new userLogIn();
+            Console.WriteLine("________________________________________________");
+            Console.WriteLine("          PRESS --->>(1)<<---LOG IN             ");
+            Console.WriteLine("________________________________________________");
+            Console.WriteLine("          PRESS --->>(2)<<--REGISTER            ");
+            Console.WriteLine("================================================");
+            int userInput = int.Parse(Console.ReadLine());
 
-            while (count < 3)
+            if (userInput.Equals(1))
             {
-                if (count == 2)
-                {
-                    Console.WriteLine("Maximum attempts exceeded");
-                    return;
-                }
-                else
-                {
-                    Console.WriteLine("\n STUDENT ID: ");
-                    string studId = Console.ReadLine();
-                    Console.WriteLine("\n PASSWORD: ");
-                    string studPassword = Console.ReadLine();
-
-                    if (studId.Equals(user.StudentID) && studPassword.Equals(user.Password))
-                    {
-                        HOME.homeUi();
-                    }
-                    else 
-                    {
-                        Console.WriteLine("INVALID ID OR PASSWORD");
-                        count++;
-                    }
-                }
+                user.logIn();
+            }
+            else if (userInput.Equals(2))
+            {
+                user.Register();
+            }
+            else
+            {
+                Console.WriteLine("INVALID INPUT");
             }
         }
     }
